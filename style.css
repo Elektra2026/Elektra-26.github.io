@@ -956,11 +956,11 @@ html, body {
 
 @media (pointer: fine) {
   body {
-    cursor: url("images/wand-cursor.png") 16 16, auto;
+    cursor: url("wand-cursor.png") 16 16, auto;
   }
 
   a, button {
-    cursor: url("images/wand-cursor.png") 16 16, pointer;
+    cursor: url("wand-cursor.png") 16 16, pointer;
   }
 }
 
