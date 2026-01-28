@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'HarryP';
+    src: url('fonts/HarryP.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* ==================================================
    GLOBAL STYLES
 ================================================== */
@@ -20,6 +27,112 @@ body {
 
   position: relative;
   z-index: 1;
+}
+
+/* ===============================
+   WEBSITE TITLE STYLE
+================================ */
+
+.site-title {
+    font-family: 'HarryP', serif;
+    font-size: clamp(56px, 8vw, 96px);
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: gold;
+    text-align: center;
+    margin: 30px 0;
+
+    text-shadow:
+        0 0 5px #ffcc00,
+        0 0 10px #ff9900,
+        0 0 20px #ff6600;
+
+    animation: lightningGlow 2s infinite alternate;
+}
+
+
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+}
+
+
+ /* ===============================
+   MAGIC LIGHTNING TITLE EFFECT
+================================ */
+
+.site-title {
+    font-family: 'HarryP', serif;
+    font-size: 72px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #ffd966;
+    position: relative;
+
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #ffcc00,
+        0 0 20px #ff9900,
+        0 0 40px #ff6600;
+    
+    animation: glowPulse 2.5s infinite alternate;
+}
+
+/* Lightning flicker */
+@keyframes glowPulse {
+    0% {
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #ffcc00,
+            0 0 20px #ff9900;
+        opacity: 0.9;
+    }
+    50% {
+        text-shadow:
+            0 0 15px #ffffff,
+            0 0 30px #ffcc00,
+            0 0 60px #ff6600;
+        opacity: 1;
+    }
+    100% {
+        text-shadow:
+            0 0 8px #fff,
+            0 0 18px #ffcc00,
+            0 0 35px #ff9900;
+        opacity: 0.95;
+    }
+}
+
+.site-title::after {
+    content: '';
+    position: absolute;
+    inset: -10px;
+    background: radial-gradient(circle, rgba(255,255,255,0.3), transparent 60%);
+    opacity: 0;
+    animation: lightningFlash 6s infinite;
+    pointer-events: none;
+}
+
+@keyframes lightningFlash {
+    0%, 92%, 100% {
+        opacity: 0;
+    }
+    93% {
+        opacity: 1;
+    }
+    94% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 0.8;
+    }
+}
+
+.tagline {
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
 img {
@@ -128,6 +241,7 @@ html, body {
 }
 
 .title {
+  max-width: 100%;
   text-align: center;
 }
 
