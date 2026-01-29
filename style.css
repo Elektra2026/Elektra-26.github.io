@@ -1462,3 +1462,38 @@ html, body {
   font-weight: bold;
   color: #f5c542;
 }
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .event-card {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+    }
+
+}
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+
+    .events-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .event-card {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 140px;
+    }
+
+}
+
