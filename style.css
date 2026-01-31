@@ -339,7 +339,7 @@ html, body {
   padding: 15px;
   text-align: center;
   background: rgba(0, 0, 0, 0.65);
-  border: 2px solid gold;
+  border: 1.5px solid gold;
   border-radius: 12px;
   animation: glow 2s infinite alternate;
   max-width: 500px;
@@ -1792,7 +1792,7 @@ html, body {
 /* Sentence line */
 .portal-text {
   color: #f5d774;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 600;
 
   text-shadow:
@@ -1844,11 +1844,11 @@ html, body {
 
 @media (max-width: 768px) {
   .portal-text {
-    font-size: 13px;
+    font-size: 14.7px;
   }
 
   .portal-date {
-    font-size: 18px;
+    font-size: 18.7px;
   }
 }
 
@@ -1893,3 +1893,24 @@ html, body {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===== FORCE mobile background for Registration Portal ===== */
+@media (max-width: 768px) {
+
+  .portal-closes {
+    display: block !important;
+    width: fit-content !important;
+    max-width: 95% !important;
+
+    padding: 12px 16px !important;
+    margin: 16px auto !important;
+
+    background-color: rgba(0, 0, 0, 0.25) !important; /* 🔧 OPACITY CONTROL */
+    border-radius: 10px !important;
+
+    z-index: 999 !important;
+  }
+
+}
+
