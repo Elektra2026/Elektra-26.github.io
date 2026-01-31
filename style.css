@@ -386,8 +386,8 @@ html, body {
   margin: 0;            /* 🔑 removes extra height */
   padding: 0;
 
-  font-size: 15px;
-  line-height: 1.4;     /* 🔑 tight text */
+  font-size: 18px;
+  line-height: 1.8;     /* 🔑 tight text */
 
   color: #ffffff;
 }
@@ -1247,8 +1247,8 @@ html, body {
     margin: 0 !important;
     padding: 0 !important;
 
-    font-size: 13px !important;
-    line-height: 1.4 !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
 
     text-align: center !important;
   }
@@ -1737,7 +1737,7 @@ html, body {
   padding: 6px 12px;
 
   color: #f7d774;
-  font-size: 11px;
+  font-size: 13.5px;
   text-align: center;
   line-height: 1.6;
   font-weight: 580;
